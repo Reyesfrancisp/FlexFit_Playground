@@ -4,10 +4,11 @@
 
 //made for functionality
 
-//object example
+//global scoped variables to contain the info being passed from the functions
 var userData;
 var workoutData;
 
+//get user info from the modal
 function getUserInfoModal() {
     var userInfo = {
         name: "Blob",
@@ -17,7 +18,7 @@ function getUserInfoModal() {
         date: "",
         email: ""
     };
-
+    //target the user info form IDs
     userInfo.name = "Name: " + $("#nameInput").val();
     userInfo.age = "Age: " + $("#ageInput").val();
     userInfo.height = "Height: " + $("#heightInput").val();
@@ -27,11 +28,12 @@ function getUserInfoModal() {
     const dateInfo = dayjs();
     userInfo.date = "Date joined: " + dateInfo.format('YYYY-MM-DD');
 
-    return userInfo;
+    return userInfo; //return the object
 }
 
+//get user workout info from the dropdown selectors
 function getUserWorkoutInfo() {
-
+    //target the form IDs
     var selectedType = $("#typeForm").val();
     var selectedMuscle = $("#muscleForm").val();
     var selectedDifficulty = $("#difficultyForm").val();
@@ -47,9 +49,10 @@ function getUserWorkoutInfo() {
     workoutInfo.muscle = selectedMuscle;
     workoutInfo.difficulty = selectedDifficulty;
 
-    return workoutInfo;
+    return workoutInfo; //return the object
 }
 
+//initialize the event listeners
 function pageInitialize() {
     $("#infoButtonSubmit").click(function () {
         userData = getUserInfoModal();
@@ -62,5 +65,5 @@ function pageInitialize() {
     });
 }
 
-
+//run after the document is ready
 $(document).ready(pageInitialize());
