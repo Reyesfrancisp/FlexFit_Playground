@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexFit Playground</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Launch static backdrop modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Check all data fields are entered correctly!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="nameInput" class="form-label">Name:</label>
+                        <input class="form-control" id="nameInput" placeholder="Blob">
+                    </div>
+                    <!-- Age -->
+                    <div class="mb-3">
+                        <label for="ageInput" class="form-label">Age:</label>
+                        <input class="form-control" id="ageInput" placeholder="40">
+                    </div>
+                    <!-- Height -->
+                    <div class="mb-3">
+                        <label for="heightInput" class="form-label">Height:</label>
+                        <input class="form-control" id="heightInput" placeholder="Enter in inches">
+                    </div>
+                    <!-- Weight -->
+                    <div class="mb-3">
+                        <label for="weightInput" class="form-label">Weight:</label>
+                        <input class="form-control" id="weightInput" placeholder="160 lbs">
+                    </div>
+                    <!-- Email -->
+                    <div class="mb-3">
+                        <label for="emailInput" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="emailInput" placeholder="Blob@Blob.com">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Exit</button>
+                    <button id="infoButtonSubmit" type="button" class="btn btn-primary">Update Info</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form for workout type -->
+    <select id="typeForm" class="form-select" aria-label="Default select example">
+        <option value="random" selected>Workout Type</option>
+        <option value="cardio">Cardio</option>
+        <option value="olympic_weightlifting">Olympic Weightlifting</option>
+        <option value="plyometrics">Plyometrics</option>
+        <option value="powerlifting">Powerlifting</option>
+        <option value="strength">Strength</option>
+        <option value="stretching">Stretching</option>
+        <option value="strongman">Strongman</option>
+    </select>
+
+    <!-- Form for muscles -->
+    <select id="muscleForm" class="form-select" aria-label="Default select example">
+        <option value="random" selected>Muscle Group</option>
+        <option value="abdominals">Abdominals</option>
+        <option value="adductors">Adductors</option>
+        <option value="biceps">Biceps</option>
+        <option value="calves">Calves</option>
+        <option value="chest">Chest</option>
+        <option value="forearms">Forearms</option>
+        <option value="glutes">Glutes</option>
+        <option value="hamstrings">Hamstrings</option>
+        <option value="lats">Lats</option>
+        <option value="lower_back">Lower_back</option>
+        <option value="middle_back">Middle_back</option>
+        <option value="neck">Neck</option>
+        <option value="quadriceps">Quadriceps</option>
+        <option value="traps">Traps</option>
+        <option value="triceps">Triceps</option>
+    </select>
+    <!-- Form for difficulty -->
+    <select id="difficultyForm" class="form-select" aria-label="Default select example">
+        <option value="random" selected>Difficulty</option>
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+    </select>
+
+    <button id="confirmButton" type="button" class="btn btn-primary">Confirm Info</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
