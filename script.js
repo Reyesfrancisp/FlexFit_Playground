@@ -56,7 +56,7 @@ function getUserWorkoutInfo() {
 function pageInitialize() {
     $("#infoButtonSubmit").click(function () {
         userData = getUserInfoModal();
-        console.log(info);
+        console.log(userData);
     });
 
     $("#confirmButton").click(function () {
